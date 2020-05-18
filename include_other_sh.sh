@@ -7,7 +7,7 @@ source filename
 #注意：被包含脚本不需要有执行权限。
 
 #在相同目录创建url.sh，内容为
- a='thi s inlcude strinf'
+a='thi s inlcude strinf'
 
 #在创建test.sh
 . ./url.sh
