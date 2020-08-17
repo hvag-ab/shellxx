@@ -41,6 +41,23 @@ echo "b / a : $val"
 val=`expr $b % $a`
 echo "b % a : $val"
 
+# 方括号运算
+var4=$[$a * ($varb - $varc)]
+echo 'The final result is '$var4
+
+##使用内联重定向计算表达式
+var1=10.45
+var2=43.67
+
+var5=`bc <<EOF
+scale=4
+a1 = $var1 * $var2
+b1 = $var1 + $var2
+a1 + b1
+EOF
+`
+echo The final answer for this mess is $var5
+
 if [ $a == $b ]
 then
    echo "a 等于 b"
